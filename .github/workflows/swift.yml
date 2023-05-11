@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Build
-      run: xcodebuild build
+      run: xcodebuild build CODE_SIGN_IDENTITY="-"
     - name: Test
-      run: xcodebuild test -scheme disiabled-wifi
+      run: xcodebuild test -scheme disabled-wifi CODE_SIGN_IDENTITY="-"

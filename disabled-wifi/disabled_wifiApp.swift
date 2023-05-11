@@ -13,7 +13,7 @@ import SwiftUI
 import CoreWLAN
 
 @main
-struct disiabled_wifiApp: App {
+struct disabled_wifiApp: App {
     
     fileprivate func enableWiFi(sleepMinutes: Int) {
         let wifiClient: CWInterface! = CWWiFiClient.shared().interface()

@@ -1,5 +1,5 @@
 import XCTest
-@testable import disiabled_wifi
+@testable import disabled_wifi
 
 final class disiable_wifiTests: XCTestCase {
 
