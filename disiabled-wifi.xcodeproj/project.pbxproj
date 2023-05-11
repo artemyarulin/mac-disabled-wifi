@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96AFD61D2A0CC37B009918C5 /* disiabled_wifiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AFD61C2A0CC37B009918C5 /* disiabled_wifiApp.swift */; };
+		96AFD6212A0CC37C009918C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96AFD6202A0CC37C009918C5 /* Assets.xcassets */; };
+		96AFD62F2A0CC37C009918C5 /* disiable_wifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AFD62E2A0CC37C009918C5 /* disiable_wifiTests.swift */; };
+		96AFD6492A0CC89E009918C5 /* CoreWLAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96AFD6482A0CC89E009918C5 /* CoreWLAN.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96AFD62B2A0CC37C009918C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96AFD6112A0CC37B009918C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96AFD6182A0CC37B009918C5;
+			remoteInfo = "disiable-wifi";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96AFD6192A0CC37B009918C5 /* disiabled-wifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "disiabled-wifi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96AFD61C2A0CC37B009918C5 /* disiabled_wifiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = disiabled_wifiApp.swift; sourceTree = "<group>"; };
+		96AFD6202A0CC37C009918C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96AFD6252A0CC37C009918C5 /* disiabled_wifi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = disiabled_wifi.entitlements; sourceTree = "<group>"; };
+		96AFD62A2A0CC37C009918C5 /* disiabled-wifiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "disiabled-wifiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96AFD62E2A0CC37C009918C5 /* disiable_wifiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = disiable_wifiTests.swift; sourceTree = "<group>"; };
+		96AFD6482A0CC89E009918C5 /* CoreWLAN.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreWLAN.framework; path = System/Library/Frameworks/CoreWLAN.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96AFD6162A0CC37B009918C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AFD6492A0CC89E009918C5 /* CoreWLAN.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AFD6272A0CC37C009918C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96AFD6102A0CC37B009918C5 = {
+			isa = PBXGroup;
+			children = (
+				96AFD61B2A0CC37B009918C5 /* disiabled-wifi */,
+				96AFD62D2A0CC37C009918C5 /* disiabled-wifiTests */,
+				96AFD61A2A0CC37B009918C5 /* Products */,
+				96AFD6472A0CC89E009918C5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		96AFD61A2A0CC37B009918C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96AFD6192A0CC37B009918C5 /* disiabled-wifi.app */,
+				96AFD62A2A0CC37C009918C5 /* disiabled-wifiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96AFD61B2A0CC37B009918C5 /* disiabled-wifi */ = {
+			isa = PBXGroup;
+			children = (
+				96AFD61C2A0CC37B009918C5 /* disiabled_wifiApp.swift */,
+				96AFD6202A0CC37C009918C5 /* Assets.xcassets */,
+				96AFD6252A0CC37C009918C5 /* disiabled_wifi.entitlements */,
+			);
+			path = "disiabled-wifi";
+			sourceTree = "<group>";
+		};
+		96AFD62D2A0CC37C009918C5 /* disiabled-wifiTests */ = {
+			isa = PBXGroup;
+			children = (
+				96AFD62E2A0CC37C009918C5 /* disiable_wifiTests.swift */,
+			);
+			path = "disiabled-wifiTests";
+			sourceTree = "<group>";
+		};
+		96AFD6472A0CC89E009918C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96AFD6482A0CC89E009918C5 /* CoreWLAN.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96AFD6182A0CC37B009918C5 /* disiabled-wifi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96AFD63E2A0CC37C009918C5 /* Build configuration list for PBXNativeTarget "disiabled-wifi" */;
+			buildPhases = (
+				96AFD6152A0CC37B009918C5 /* Sources */,
+				96AFD6162A0CC37B009918C5 /* Frameworks */,
+				96AFD6172A0CC37B009918C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "disiabled-wifi";
+			productName = "disiable-wifi";
+			productReference = 96AFD6192A0CC37B009918C5 /* disiabled-wifi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96AFD6292A0CC37C009918C5 /* disiabled-wifiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96AFD6412A0CC37C009918C5 /* Build configuration list for PBXNativeTarget "disiabled-wifiTests" */;
+			buildPhases = (
+				96AFD6262A0CC37C009918C5 /* Sources */,
+				96AFD6272A0CC37C009918C5 /* Frameworks */,
+				96AFD6282A0CC37C009918C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96AFD62C2A0CC37C009918C5 /* PBXTargetDependency */,
+			);
+			name = "disiabled-wifiTests";
+			productName = "disiable-wifiTests";
+			productReference = 96AFD62A2A0CC37C009918C5 /* disiabled-wifiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96AFD6112A0CC37B009918C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					96AFD6182A0CC37B009918C5 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					96AFD6292A0CC37C009918C5 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 96AFD6182A0CC37B009918C5;
+					};
+				};
+			};
+			buildConfigurationList = 96AFD6142A0CC37B009918C5 /* Build configuration list for PBXProject "disiabled-wifi" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96AFD6102A0CC37B009918C5;
+			productRefGroup = 96AFD61A2A0CC37B009918C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96AFD6182A0CC37B009918C5 /* disiabled-wifi */,
+				96AFD6292A0CC37C009918C5 /* disiabled-wifiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96AFD6172A0CC37B009918C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AFD6212A0CC37C009918C5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AFD6282A0CC37C009918C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96AFD6152A0CC37B009918C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AFD61D2A0CC37B009918C5 /* disiabled_wifiApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96AFD6262A0CC37C009918C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96AFD62F2A0CC37C009918C5 /* disiable_wifiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96AFD62C2A0CC37C009918C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96AFD6182A0CC37B009918C5 /* disiabled-wifi */;
+			targetProxy = 96AFD62B2A0CC37C009918C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		96AFD63C2A0CC37C009918C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96AFD63D2A0CC37C009918C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		96AFD63F2A0CC37C009918C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "disiabled-wifi/disiabled_wifi.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = W3G49762MS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kapteko.disiabled-wifi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		96AFD6402A0CC37C009918C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "disiabled-wifi/disiabled_wifi.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = W3G49762MS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kapteko.disiabled-wifi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		96AFD6422A0CC37C009918C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W3G49762MS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kapteko.disiabled-wifiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/disiabled-wifi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/disiabled-wifi";
+			};
+			name = Debug;
+		};
+		96AFD6432A0CC37C009918C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W3G49762MS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kapteko.disiabled-wifiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/disiabled-wifi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/disiabled-wifi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96AFD6142A0CC37B009918C5 /* Build configuration list for PBXProject "disiabled-wifi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AFD63C2A0CC37C009918C5 /* Debug */,
+				96AFD63D2A0CC37C009918C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96AFD63E2A0CC37C009918C5 /* Build configuration list for PBXNativeTarget "disiabled-wifi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AFD63F2A0CC37C009918C5 /* Debug */,
+				96AFD6402A0CC37C009918C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96AFD6412A0CC37C009918C5 /* Build configuration list for PBXNativeTarget "disiabled-wifiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96AFD6422A0CC37C009918C5 /* Debug */,
+				96AFD6432A0CC37C009918C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96AFD6112A0CC37B009918C5 /* Project object */;
+}
