@@ -1,3 +1,4 @@
 xcuserdata/
-*.xcodeproj/*
 build
+*.xcworkspacedata
+xcshareddata
