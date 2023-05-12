@@ -11,9 +11,9 @@ func enableWiFiFor(durationMinutes: Int) {
 }
 
 func setWiFiPower(power: Bool) {
-    do {
-        try wifiClient.setPower(power)
-    } catch { 
-        print("Unexpected error: \(error).")
-    }
+//    do {
+//        try wifiClient.setPower(power)
+//    } catch {
+//        print("Unexpected error: \(error).")
+//    }
 }
