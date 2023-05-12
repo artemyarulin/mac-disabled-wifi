@@ -14,9 +14,8 @@ import SwiftUI
 struct disabled_wifiApp: App {
 
     init() {
-        // TODO Let's see if that triggers an error
-//        NSApplication.shared.setActivationPolicy(.accessory) // Hide from Cmd+Tab
-//        setWiFiPower(power: false)
+        NSApplication.shared.setActivationPolicy(.accessory) // Hide from Cmd+Tab
+        setWiFiPower(power: false)
     }
     
     var body: some Scene {
