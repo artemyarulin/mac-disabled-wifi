@@ -20,3 +20,10 @@ func setWiFiPower(power: Bool) {
         print("Unexpected error: \(error).")
     }
 }
+
+// Hides/Shows standard WiFi top bar menu item
+func setWiFiStatusButtonVisibility(visible: Bool) {
+    // Command and magic numbers taken from https://superuser.com/a/1723655
+    let code = visible ? 18 : 24
+    runBashCommand(command: "defaults -currentHost write com.apple.controlcenter WiFi -int \(code)")
+}
