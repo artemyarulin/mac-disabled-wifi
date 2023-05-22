@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9615B4182A1B76C7007AD7A6 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9615B4172A1B76C7007AD7A6 /* utils.swift */; };
+		96300ECA2A0D66C0007DAC82 /* wifi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96300EC92A0D66C0007DAC82 /* wifi.swift */; };
 		96AFD61D2A0CC37B009918C5 /* disabled_wifiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AFD61C2A0CC37B009918C5 /* disabled_wifiApp.swift */; };
 		96AFD6212A0CC37C009918C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96AFD6202A0CC37C009918C5 /* Assets.xcassets */; };
 		96AFD62F2A0CC37C009918C5 /* disabled_wifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AFD62E2A0CC37C009918C5 /* disabled_wifiTests.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9615B4172A1B76C7007AD7A6 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		96300EC92A0D66C0007DAC82 /* wifi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wifi.swift; sourceTree = "<group>"; };
 		96AFD6192A0CC37B009918C5 /* disabled-wifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "disabled-wifi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96AFD61C2A0CC37B009918C5 /* disabled_wifiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = disabled_wifiApp.swift; sourceTree = "<group>"; };
 		96AFD6202A0CC37C009918C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				96AFD61C2A0CC37B009918C5 /* disabled_wifiApp.swift */,
 				96AFD6202A0CC37C009918C5 /* Assets.xcassets */,
 				96AFD6252A0CC37C009918C5 /* disabled_wifi.entitlements */,
+				96300EC92A0D66C0007DAC82 /* wifi.swift */,
+				9615B4172A1B76C7007AD7A6 /* utils.swift */,
 			);
 			path = "disabled-wifi";
 			sourceTree = "<group>";
@@ -196,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9615B4182A1B76C7007AD7A6 /* utils.swift in Sources */,
+				96300ECA2A0D66C0007DAC82 /* wifi.swift in Sources */,
 				96AFD61D2A0CC37B009918C5 /* disabled_wifiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
