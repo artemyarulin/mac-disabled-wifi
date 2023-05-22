@@ -6,7 +6,6 @@
 // When WiFi is enabled manually - which option it is?
 // On LapTop started/Lid open
 // Monitor WiFi changes https://developer.apple.com/forums/thread/11307
-// Hide WiFi?
 
 import SwiftUI
 
@@ -15,10 +14,11 @@ struct disabled_wifiApp: App {
     init() {
         NSApplication.shared.setActivationPolicy(.accessory) // Hide from Cmd+Tab
         setWiFiPower(power: false)
+        setWiFiStatusButtonVisibility(visible: false)
     }
     
     var body: some Scene {
-        MenuBarExtra("", systemImage: "wifi.router") {
+        MenuBarExtra("", systemImage: "wifi") {
             Button("Enable for 1 minute") {
                 enableWiFiFor(durationMinutes: 1)
             }
@@ -32,6 +32,8 @@ struct disabled_wifiApp: App {
                 enableWiFiFor(durationMinutes: 120)
             }
             Button("Exit") {
+                setWiFiPower(power: true)
+                setWiFiStatusButtonVisibility(visible: true)
                 exit(0)
             }
         }
