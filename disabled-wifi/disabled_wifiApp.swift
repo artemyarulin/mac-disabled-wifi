@@ -12,12 +12,16 @@ import SwiftUI
 
 @main
 struct disabled_wifiApp: App {
-
-    init() {
-        NSApplication.shared.setActivationPolicy(.accessory) // Hide from Cmd+Tab
-        setWiFiPower(power: false)
-    }
     
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    class AppDelegate: NSObject, NSApplicationDelegate {
+        func applicationDidFinishLaunching(_ notification: Notification) {
+            NSApplication.shared.setActivationPolicy(.accessory) // Hide from Cmd+Tab
+            print("Hello, I'm disabling WiFi")
+            setWiFiPower(power: false)
+        }
+    }
+        
     var body: some Scene {
         MenuBarExtra("", systemImage: "wifi.router") {
             Button("Enable for 1 minute") {
