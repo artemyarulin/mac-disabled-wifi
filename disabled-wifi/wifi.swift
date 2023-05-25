@@ -3,10 +3,11 @@ import CoreWLAN
 
 let wifiClient: CWInterface! = CWWiFiClient.shared().interface()
 
-func enableWiFiFor(durationMinutes: Int) {
+func enableWiFiFor(durationMinutes: Int, completion: (() -> Void)? = nil) {
     setWiFiPower(power: true)
     DispatchQueue.main.asyncAfter(deadline: .now() + Double(durationMinutes) * 60) {
         setWiFiPower(power: false)
+        completion?()
     }
 }
 
