@@ -1,5 +1,3 @@
-// Timer to check current state
-// Render current state - Enabled for X minutes / Locked for 5 minutes / Enable options
 // Disable changes after enable time expired for 5 minutes
 // Register as LoginItem
 // Protect from quitting
@@ -9,33 +7,80 @@
 
 import SwiftUI
 
+let wifiIconEnabled = "wifi"
+let wifiIconDisabled = "wifi.slash"
+
 @main
 struct disabled_wifiApp: App {
+    @State private var timer: Timer?
+    @State private var enabledTill: Date?
+    @State private var enabledFor: String?
+    @State private var menuIcon: String = wifiIconDisabled
+    
     init() {
         NSApplication.shared.setActivationPolicy(.accessory) // Hide from Cmd+Tab
         setWiFiPower(power: false)
         setWiFiStatusButtonVisibility(visible: false)
     }
     
+    func switchWiFiOnFor(durationMinutes: Int) {
+        menuIcon = wifiIconEnabled
+        enabledTill = Date().addingTimeInterval(TimeInterval(durationMinutes * 60))
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
+            let formatter = DateComponentsFormatter()
+            formatter.allowedUnits = [.minute, .hour, .second]
+            formatter.unitsStyle = .abbreviated
+            let elapsedTime = Calendar.current.dateComponents([.minute, .hour, .second], from: Date(), to: enabledTill!)
+            let timeLeft = formatter.string(from: elapsedTime) ?? ""
+            enabledFor = "\(timeLeft) left. Stop now"
+        }
+        enableWiFiFor(durationMinutes: durationMinutes) {
+            menuIcon = wifiIconDisabled
+            timer?.invalidate()
+        }
+    }
+    
+    func buttons() -> AnyView {
+        if menuIcon == wifiIconEnabled {
+            var body: some View {
+                VStack {
+                    Button(enabledFor ?? "Disabled") {
+                        setWiFiPower(power: false)
+                        menuIcon = wifiIconDisabled
+                    }
+                    Button("Exit") {
+                        setWiFiPower(power: true)
+                        setWiFiStatusButtonVisibility(visible: true)
+                        exit(0)
+                    }
+                }
+            }
+            return AnyView(body)
+        }
+        var body: some View {
+            VStack {
+                Button("Enable for 1 minute") {
+                    switchWiFiOnFor(durationMinutes: 1)
+                }
+                Button("Enable for 30 minutes") {
+                    switchWiFiOnFor(durationMinutes: 30)
+                }
+                Button("Enable for 2 hours") {
+                    switchWiFiOnFor(durationMinutes: 120)
+                }
+                Button("Exit") {
+                    setWiFiPower(power: true)
+                    setWiFiStatusButtonVisibility(visible: true)
+                    exit(0)
+                }
+            }
+        }
+        return AnyView(body)
+    }
+    
     var body: some Scene {
-        MenuBarExtra("", systemImage: "wifi") {
-            Button("Enable for 1 minute") {
-                enableWiFiFor(durationMinutes: 1)
-            }
-            Button("Enable for 10 minutes") {
-                enableWiFiFor(durationMinutes: 10)
-            }
-            Button("Enable for 30 minutes") {
-                enableWiFiFor(durationMinutes: 30)
-            }
-            Button("Enable for 2 hours") {
-                enableWiFiFor(durationMinutes: 120)
-            }
-            Button("Exit") {
-                setWiFiPower(power: true)
-                setWiFiStatusButtonVisibility(visible: true)
-                exit(0)
-            }
+        MenuBarExtra("", systemImage: menuIcon) {
+            buttons()
         }
     }
 }
