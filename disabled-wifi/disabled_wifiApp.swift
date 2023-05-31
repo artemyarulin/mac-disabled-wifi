@@ -23,17 +23,29 @@ struct disabled_wifiApp: App {
         setWiFiStatusButtonVisibility(visible: false)
     }
     
+    func onExit() {
+        setWiFiPower(power: true)
+        setWiFiStatusButtonVisibility(visible: true)
+        exit(0)
+    }
+    
+    func onQqself() {
+        let url = URL(string: "https://www.qqself.com")
+        NSWorkspace.shared.open(url!)
+    }
+    
+    func updateTimeLeft() {
+        let timeLeft = formatTimeLeft(tillDate: enabledTill!)
+        enabledFor = "\(timeLeft) left. Stop now"
+    }
+    
     func switchWiFiOnFor(durationMinutes: Int) {
         menuIcon = wifiIconEnabled
         enabledTill = Date().addingTimeInterval(TimeInterval(durationMinutes * 60))
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {_ in
-            let formatter = DateComponentsFormatter()
-            formatter.allowedUnits = [.minute, .hour, .second]
-            formatter.unitsStyle = .abbreviated
-            let elapsedTime = Calendar.current.dateComponents([.minute, .hour, .second], from: Date(), to: enabledTill!)
-            let timeLeft = formatter.string(from: elapsedTime) ?? ""
-            enabledFor = "\(timeLeft) left. Stop now"
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            updateTimeLeft()
         }
+        timer!.fire() // Force `enabledFor` refresh right away
         enableWiFiFor(durationMinutes: durationMinutes) {
             menuIcon = wifiIconDisabled
             timer?.invalidate()
@@ -48,11 +60,9 @@ struct disabled_wifiApp: App {
                         setWiFiPower(power: false)
                         menuIcon = wifiIconDisabled
                     }
-                    Button("Exit") {
-                        setWiFiPower(power: true)
-                        setWiFiStatusButtonVisibility(visible: true)
-                        exit(0)
-                    }
+                    Divider()
+                    Button("Open qqself") { onQqself() }
+                    Button("Exit") { onExit() }
                 }
             }
             return AnyView(body)
@@ -62,17 +72,18 @@ struct disabled_wifiApp: App {
                 Button("Enable for 1 minute") {
                     switchWiFiOnFor(durationMinutes: 1)
                 }
+                Button("Enable for 10 minutes") {
+                    switchWiFiOnFor(durationMinutes: 10)
+                }
                 Button("Enable for 30 minutes") {
                     switchWiFiOnFor(durationMinutes: 30)
                 }
                 Button("Enable for 2 hours") {
                     switchWiFiOnFor(durationMinutes: 120)
                 }
-                Button("Exit") {
-                    setWiFiPower(power: true)
-                    setWiFiStatusButtonVisibility(visible: true)
-                    exit(0)
-                }
+                Divider()
+                Button("Open qqself") { onQqself() }
+                Button("Exit") { onExit() }
             }
         }
         return AnyView(body)

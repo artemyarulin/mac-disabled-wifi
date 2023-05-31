@@ -1,7 +1,7 @@
 import Foundation
 
 // Returns true if apps runs under tests
-public func isRunningTests() -> Bool {
+func isRunningTests() -> Bool {
     let environment = ProcessInfo.processInfo.environment
     return environment["XCTestConfigurationFilePath"] != nil
 }
@@ -22,4 +22,12 @@ func runBashCommand(command: String) {
     if status != 0 {
         print("Command failed with exit code: \(status)\n\(String(describing: output))")
     }
+}
+
+func formatTimeLeft(tillDate: Date) -> String {
+    let formatter = DateComponentsFormatter()
+    formatter.allowedUnits = [.minute, .hour, .second]
+    formatter.unitsStyle = .abbreviated
+    let elapsedTime = Calendar.current.dateComponents([.minute, .hour, .second], from: Date(), to: tillDate)
+    return formatter.string(from: elapsedTime) ?? ""
 }
