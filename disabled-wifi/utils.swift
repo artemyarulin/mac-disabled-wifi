@@ -24,6 +24,11 @@ func runBashCommand(command: String) {
     }
 }
 
+// Runs command which logsout current user
+func logout() {
+    runBashCommand(command: "launchctl bootout gui/$(id -u $(whoami))")
+}
+
 func formatTimeLeft(tillDate: Date) -> String {
     let formatter = DateComponentsFormatter()
     formatter.allowedUnits = [.minute, .hour, .second]
